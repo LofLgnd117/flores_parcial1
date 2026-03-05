@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodologías de Desarrollo de SW</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 { font-size: 24px; text-transform: uppercase; margin-bottom: 20px; }
+        h2 { font-size: 20px; margin-bottom: 10px; }
+        h3 { font-size: 18px; text-transform: uppercase; margin-top: 30px; }
+        
+        .description {
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0 auto 30px auto;
+            max-width: 800px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .btn {
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            min-width: 150px;
+            text-transform: uppercase;
+            transition: opacity 0.3s;
+        }
+
+        .btn:hover { opacity: 0.8; }
+
+        /* Button Colors */
+        .btn-cascada { background-color: #007bff; }
+        .btn-modelo-v { background-color: #6c757d; }
+        .btn-agiles { background-color: #28a745; }
+        .btn-scrum { background-color: #dc3545; }
+        .btn-kanban { background-color: #ffc107; color: black; }
+        .btn-xp { background-color: #17a2b8; }
+        .btn-hibridas { background-color: #343a40; }
+
+        .image-display-area {
+            margin: 20px auto;
+            min-height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #methodology-image {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            display: none; /* Hidden until a button is clicked */
+        }
+
+        .link-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: 1px solid #007bff;
+            color: #007bff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .footer-text {
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .example-text { font-style: italic; color: #555; }
+        .student-name { font-weight: bold; font-size: 18px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Metodologías de Desarrollo de SW</h1>
+    <h2>¿Qué es una metodología de desarrollo de software?</h2>
+    <p class="description">
+        Las metodologías de desarrollo de software son un conjunto de técnicas y métodos organizativos que se aplican para diseñar soluciones de software informático. El objetivo de las distintas metodologías es el de intentar organizar los equipos de trabajo para que estos desarrollen las funciones de un programa de la mejor manera posible.
+    </p>
+
+    <h3>Tipos de Metodologías</h3>
+    
+    <div class="button-container">
+        <button class="btn btn-cascada" onclick="showImage('img/cascada.png')">Cascada</button>
+        <button class="btn btn-modelo-v" onclick="showImage('img/modelo_v.png')">Modelo V</button>
+        <button class="btn btn-agiles" onclick="showImage('img/agiles.png')">Ágiles</button>
+        <button class="btn btn-scrum" onclick="showImage('img/scrum.png')">Scrum</button>
+        <button class="btn btn-kanban" onclick="showImage('img/kanban.png')">Kanban</button>
+        <button class="btn btn-xp" onclick="showImage('img/xp.png')">XP</button>
+        <button class="btn btn-hibridas" onclick="showImage('img/hibridas.png')">Híbridas</button>
+    </div>
+
+    <div class="image-display-area">
+        <img id="methodology-image" src="" alt="Metodología Seleccionada">
+    </div>
+
+    <div class="jira-section">
+        <h3>Link a Tablero de Trabajo</h3>
+        <a href="https://utd-team-bct3gry.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiOGU0ODczODlhNTBiNDBlNjkwYmY0YTcxNGI3ZTQwN2IiLCJwIjoiaiJ9" class="link-btn" target="_blank">---- JIRA ----</a>
+    </div>
+
+    <div class="footer-text">
+        <a href="index.html" class="link-btn">---- REGRESAR MENÚ PRINCIPAL ----</a>
+        
+        <h3>Escribe la frase que colocaste en el tablero de metodología ágil:</h3>
+        <p class="example-text">Cualquiera que tenga un por que, puede superar cualquier como</p>
+        
+        <p class="student-name">Alumno:Flores Verdin Leonardo Javier</p>
+    </div>
+</div>
+
+<script>
+    function showImage(imagePath) {
+        const imgElement = document.getElementById('methodology-image');
+        imgElement.src = imagePath;
+        imgElement.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
